@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAIA;EACE,0BAHkB;EAIlB,kBAAkB,EACnB","file":"app.css","sourcesContent":["// @import \"node_modules/bootstrap-sass/assets/stylesheets/bootstrap\";\n\n$mainOrange: #2196F3;\n\n.navbar-virtual-handshake{\n  background-color: $mainOrange;\n  color: whitesmoke;\n}\n\n"],"sourceRoot":"/source/"}
