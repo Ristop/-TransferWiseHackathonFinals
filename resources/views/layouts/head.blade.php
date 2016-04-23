@@ -3,7 +3,7 @@
 <meta name="keywords" content="">
 <meta name="_token"content="<?php echo csrf_token()?>"/>
 
-<title>Valgeranna puhkekeskus</title>
+<title>Virtual Handshake</title>
 
 <!--stylesheets-->
 <!-- Latest compiled and minified CSS -->
@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href={{URL::asset('/css/app.css')}}>
 <link rel="stylesheet" href={{URL::asset('/css/timeline.css')}}>
-
+<link rel="stylesheet" href={{URL::asset('/css/workflowTimeline.css')}}>
 <!--custom fonts-->
 <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 

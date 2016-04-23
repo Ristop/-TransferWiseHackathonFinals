@@ -5,7 +5,7 @@ $mainBlue: #2196F3;
 .navbar-virtual-handshake {
   background-color: ghostwhite;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 .container-fluid {
@@ -15,11 +15,11 @@ $mainBlue: #2196F3;
 }
 .section-main-first{
   height: auto;
+  position:relative;
 }
 .section-main-first .img-responsive {
-  box-shadow: 0px 3px 15px 1px #000000;
-  opacity: 0.7;
-  min-height: 150px;
+  //box-shadow: 0px 3px 15px 1px #000000;
+  opacity: 0.8;
   max-height: 350px;
   overflow: hidden;
   width: 100%;
@@ -30,13 +30,16 @@ $mainBlue: #2196F3;
 }
 
 .section-main-first-content{
+  line-height: 45px;
   width: 100%;
   position: absolute; // position on top of the background div
-  top: 300px;
+  top: 70%;
+  //padding-bottom: 60px;
   color: whitesmoke;
   font-size: 50px;
 }
 .section-main-first-content .Buyer{
+
   color: $mainBlue;
   border-right: 3px solid black;
   border-bottom-right-radius: 20px;

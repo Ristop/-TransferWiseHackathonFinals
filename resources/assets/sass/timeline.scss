@@ -14,7 +14,7 @@ body {
 }
 
 $gray-base:     #999999;
-$brand-primary: #3498DB; //Zen Blue
+$brand-primary: gray; //Zen Blue
 
 .section-header {
   color: $brand-primary;
@@ -22,6 +22,10 @@ $brand-primary: #3498DB; //Zen Blue
   font-size: 1.4em;
 }
 
+.steps-section{
+  margin: 20px;
+  padding: 20px;
+}
 
 .steps-header {
   @extend .section-header;
@@ -107,7 +111,7 @@ $brand-primary: #3498DB; //Zen Blue
 
 .steps-name,
 .steps-description {
-  margin: 0;
+  margin: 10px 0;
 }
 .steps-name {
   @extend .section-header;
