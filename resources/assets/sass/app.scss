@@ -1,6 +1,7 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 $mainBlue: #2196F3;
+$green: #4CAF50;
 
 .navbar-virtual-handshake {
   background-color: ghostwhite;
@@ -38,17 +39,23 @@ $mainBlue: #2196F3;
   color: whitesmoke;
   font-size: 50px;
 }
+
+#subscribe-container{
+  position: absolute;
+  top:10%;
+  left: 60%;
+}
 .section-main-first-content .Buyer{
 
   color: $mainBlue;
-  border-right: 3px solid black;
+  border-right: 3px solid $green;
   border-bottom-right-radius: 20px;
 }
 
 .section-main-first-content .Vendor{
   color: black;
   border-top-left-radius: 20px;
-  border-left: 3px solid $mainBlue;
+  border-left: 3px solid $green;
 }
 .section-main-second-content{
   height: 500px;
@@ -63,3 +70,23 @@ $mainBlue: #2196F3;
   height: 500px;
 }
 
+
+.section-live-demo{
+  background-color: gainsboro;
+  height: 500px;
+}
+
+.section-live-demo-header{
+  text-align: center;
+  padding: 30px 0;
+  color: $green;
+}
+
+#subscribe-name{
+  color: black;
+}
+
+.subscribe-button{
+  background-color: $green;
+  color: white;
+}

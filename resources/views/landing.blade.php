@@ -13,12 +13,24 @@
                 <p class="pull-left">Vendor</p>
             </div>
         </div>
+        <div id="subscribe-container">
+            <div class="col-lg-8">
+                <label id="subscribe-name" for="subscribe">Subscribe for updates</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="email address" id="subscribe">
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary subscribe-button" type="button">Subscribe</button>
+                </span>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- STEPS -->
     <div id="Steps" class="steps-section">
 
         <h1 class="steps-header">
-            What we do
+            What we offer
         </h1>
 
         <div class="steps-timeline">
@@ -93,7 +105,7 @@
     </div>
     -->
     <div class="container">
-        <h1 class="project-name">Workflow</h1>
+        <h1 class="project-name">How it works</h1>
         <div id="timeline">
             <div class="timeline-item">
                 <div class="timeline-icon">
@@ -169,6 +181,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="section-live-demo">
+        <h1 class="section-live-demo-header">What it looks like</h1>
     </div>
 
 @stop
