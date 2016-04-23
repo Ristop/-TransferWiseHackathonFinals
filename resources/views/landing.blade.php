@@ -27,86 +27,32 @@
                 </form>
             </div>
         </div>
-
     </div>
-    <!-- STEPS -->
+
     <div id="Steps" class="steps-section">
-
-        <h1 class="steps-header">
-            What we offer
-        </h1>
-
+        <h1 class="steps-header">What we offer</h1>
         <div class="steps-timeline">
-
             <div class="steps-one">
                 <img class="steps-img" src="http://placehold.it/50/3498DB/FFFFFF" alt=""/>
-                <h3 class="steps-name">
-                    Client
-                </h3>
-                <p class="steps-description">
-                    Our client saves time and money by using our service.
-                </p>
+                <h3 class="steps-name">Client</h3>
+                <p class="steps-description">Our client can have the product shipped much faster when the vendor uses
+                    our service.</p>
             </div>
-
             <div class="steps-two">
                 <img class="steps-img" src="http://placehold.it/50/4CAF50/FFFFFF" alt=""/>
-                <h3 class="steps-name">
-                    Us
-                </h3>
-                <p class="steps-description">
-                    When our escrow receives the transfer, we notify the vendor for them to release the product.
-                </p>
+                <h3 class="steps-name">Us</h3>
+                <p class="steps-description">We offer a platform where the vendor can ping whether the client has
+                    issued a wire transfer to the vendor's bank account</p>
             </div>
-
             <div class="steps-three">
                 <img class="steps-img" src="http://placehold.it/50/000000/FFFFFF" alt=""/>
-                <h3 class="steps-name">
-                    Vendor
-                </h3>
-                <p class="steps-description">
-                    When the shipment has arrived to the client, we release the escrow to the vendor.
-                </p>
-            </div>
-
-        </div><!-- /.steps-timeline -->
-
-    </div>
-    <!--
-    <div class="section-main-second-content">
-        <div class="Buyer col-md-6 col-xs-6">
-            <p class="pull-right"></p>
-            <h1 class="text-center">Clients</h1>
-            <div id="section-two" class="row text-center">
-                @foreach($transactions as $transaction)
-    @if( $transaction -> role == "client")
-            <div style="padding: 20px;">
-                <p>Source: {{ $transaction -> sourceAmount }} {{ $transaction -> source }}</p>
-                            <p>Target: {{ $transaction -> targetAmount }} {{ $transaction -> target }}</p>
-                            <p>Rate: {{ $transaction -> rate }}</p>
-                            <p>Fee: {{ $transaction -> fee }} {{ $transaction -> source }}</p>
-                        </div>
-                    @endif
-    @endforeach
-            </div>
-        </div>
-        <div class="Vendor col-md-6 col-xs-6">
-            <p class="pull-left"></p>
-            <h1 class="text-center">Vendors</h1>
-            <div id="section-three" class="row text-center">
-                @foreach($transactions as $transaction)
-    @if( $transaction -> role == "vendor")
-            <div style="padding: 20px;">
-                <p>Source: {{ $transaction -> sourceAmount }} {{ $transaction -> source }}</p>
-                            <p>Target: {{ $transaction -> targetAmount }} {{ $transaction -> target }}</p>
-                            <p>Rate: {{ $transaction -> rate }}</p>
-                            <p>Fee: {{ $transaction -> fee }}</p>
-                        </div>
-                    @endif
-    @endforeach
+                <h3 class="steps-name">Vendor</h3>
+                <p class="steps-description">When the ping returns a positive result, the vendor can ship the product
+                    without having to wait for the funds to arrive to their bank account.</p>
             </div>
         </div>
     </div>
-    -->
+
     <div class="container">
         <h1 class="project-name">How it works</h1>
         <div id="timeline">
@@ -126,14 +72,8 @@
                 </div>
                 <div class="timeline-content">
                     <div class="blue">
-                        <h2>The customer wires their transfer to our escrow account.</h2>
-                        <p>Benefits:</p>
-                        <ul>
-                            <li>Shorter wait time for delivery</li>
-                            <li>Assurance on shipment delivery</li>
-                            <li>Cutting costs on currency conversion</li>
-                            <li>Faster currency conversion</li>
-                        </ul>
+                        <h2>The customer allows our product to query payment information from their bank provider.</h2>
+                        <p>The system can only query information about the specific payment done to the vendor.</p>
                     </div>
                 </div>
             </div>
@@ -156,11 +96,9 @@
 
                 </div>
                 <div class="timeline-content right">
-                    <div class="black">
-                        <h2>The funds are waiting for confirmation in our escrow account.</h2>
-                        <p>The client can choose for how long the money is kept on our escrow account, waiting for
-                            confirmation. When confirmation is given by the vendor that the product has been shipped, we
-                            release the escrow payment.</p>
+                    <div class="green">
+                        <h2>Our system periodically pings client's bank history to see if the transfer has been wired.</h2>
+                        <p>Once our system detects a successful payment, it notifies the vendor that the transfer has been made.</p>
 
                     </div>
                 </div>
@@ -181,7 +119,7 @@
 
                 </div>
                 <div class="timeline-content">
-                    <div class="blue">
+                    <div class="black">
                         <h2>The customer waits for the product to arrive.</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
@@ -212,7 +150,8 @@
                     <div class="black">
                         <h2>Escrow release</h2>
                         <p>
-                            When confirmation is given by the customer that the product has been shipped, we release the escrow payment to be delivered to the vendor.
+                            When confirmation is given by the customer that the product has been shipped, we release the
+                            escrow payment to be delivered to the vendor.
                         </p>
                     </div>
                 </div>
@@ -227,7 +166,7 @@
                 <form action="makePayment" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label id="subscribe-name" for="subscribe">Make a payment</label>
+                        <label id="subscribe-name" for="subscribe">Wire the funds</label>
                         <input type="text" class="form-control" placeholder="Vendor identification" name="address">
                     </div>
                     <div class="form-group">
@@ -241,25 +180,12 @@
                          </span>
                         </div>
                     </div>
-                    <div>
-                        <div class="btn-group">
-                            <button type="button" id="button1" class="btn btn-default">
-                                Upon receive
-                            </button>
-                            <button type="button"  id="button2" class="btn btn-default">
-                                50/50
-                            </button>
-                            <button type="button" id="button3" class="btn btn-default">
-                                At delivery
-                            </button>
-                        </div>
-                    </div>
                 </form>
             </div>
             <div class="Vendor col-md-6 col-xs-6">
                 <form action="checkPayment" method="POST">
                     {{ csrf_field() }}
-                    <label id="subscribe-name" for="subscribe">Check the payment</label>
+                    <label id="subscribe-name" for="subscribe">Check if the payment has arrived</label>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Billing reference" name="address">
                      <span class="input-group-btn">

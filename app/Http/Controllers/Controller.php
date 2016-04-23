@@ -20,7 +20,6 @@ class Controller extends BaseController
         $email = new Email;
         $email -> address = $address;
         $email -> save();
-        $transactions = Transaction::all();
-        return view('landing', ['transactions' => $transactions]);
+        return redirect()->back();
     }
 }
