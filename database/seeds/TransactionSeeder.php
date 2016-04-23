@@ -12,6 +12,7 @@ class TransactionSeeder extends Seeder
     public function run()
     {
         DB::table('transactions')->insert([
+            'role' => 'client',
             'source' => 'USD',
             'target' => 'EUR',
             'sourceAmount' => '116.62',
@@ -21,6 +22,7 @@ class TransactionSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
+            'role' => 'client',
             'source' => 'GBP',
             'target' => 'EUR',
             'sourceAmount' => '1000',
@@ -30,6 +32,7 @@ class TransactionSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
+            'role' => 'vendor',
             'source' => 'EUR',
             'target' => 'SEK',
             'sourceAmount' => '109.81',

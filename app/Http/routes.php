@@ -13,6 +13,17 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
-        return view('landing');
+        $transactions = App\Transaction::all();
+        return view('landing', ['transactions' => $transactions]);
+    });
+    Route::get('wallet/buyer', function () {
+        $transactions = App\Transaction::all();
+        return view('wallet.buyer', ['transactions' => $transactions]);
+    });
+    Route::get('wallet/vendor', function () {
+        return view('wallet.vendor');
+    });
+    Route::get('login', function () {
+        return view('login');
     });
 });
