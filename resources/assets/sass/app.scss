@@ -1,9 +1,61 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-$mainOrange: #2196F3;
+$mainBlue: #2196F3;
 
-.navbar-virtual-handshake{
-  background-color: $mainOrange;
-  color: whitesmoke;
+.navbar-virtual-handshake {
+  background-color: ghostwhite;
+  margin: 0;
+  padding: 0;
 }
 
+.container-fluid {
+  padding-top: 10px;
+  color: $mainBlue;
+  font-size: 25px;
+}
+.section-main-first{
+  height: auto;
+}
+.section-main-first .img-responsive {
+  box-shadow: 0px 3px 15px 1px #000000;
+  opacity: 0.7;
+  min-height: 150px;
+  max-height: 350px;
+  overflow: hidden;
+  width: 100%;
+}
+
+*{
+  font-family: "Roboto", sans-serif !important;
+}
+
+.section-main-first-content{
+  width: 100%;
+  position: absolute; // position on top of the background div
+  top: 300px;
+  color: whitesmoke;
+  font-size: 50px;
+}
+.section-main-first-content .Buyer{
+  color: $mainBlue;
+  border-right: 3px solid black;
+  border-bottom-right-radius: 20px;
+}
+
+.section-main-first-content .Vendor{
+  color: black;
+  border-top-left-radius: 20px;
+  border-left: 3px solid $mainBlue;
+}
+.section-main-second-content{
+  height: 500px;
+}
+.section-main-second-content .Buyer{
+  //border-right: 2px solid gainsboro;
+  height: 500px;
+}
+
+.section-main-second-content .Vendor{
+  //border-left: 2px solid gainsboro;
+  height: 500px;
+}
