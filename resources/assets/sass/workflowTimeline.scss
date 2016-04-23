@@ -162,6 +162,22 @@ header {
       }
     }
 
+
+    .black-arrow{
+      &:before {
+        border-left:7px solid black;
+      }
+    }
+    .blue-arrow{
+      &:before {
+        border-left:7px solid $primary-color;
+      }
+    }
+    .green-arrow{
+      &:before {
+        border-left:7px solid $secondary-color;
+      }
+    }
     .timeline-content {
       width: 45%;
       background: #fff;
@@ -173,31 +189,22 @@ header {
       p{
         padding-top: 20px;
       }
-      .blue h2 {
+      h2 {
         padding: 15px;
+        color: #fff;
+        margin: -20px -20px 0 -20px;
+        font-weight: 300;
+        @include prefix(border-radius, 3px 3px 0 0);
+      }
+
+      .blue h2{
         background: $primary-color;
-        color: #fff;
-        margin: -20px -20px 0 -20px;
-        font-weight: 300;
-        @include prefix(border-radius, 3px 3px 0 0);
       }
-
-      .green h2 {
-        padding: 15px;
+      .green h2{
         background: $secondary-color;
-        color: #fff;
-        margin: -20px -20px 0 -20px;
-        font-weight: 300;
-        @include prefix(border-radius, 3px 3px 0 0);
       }
-
-      .black h2 {
-        padding: 15px;
+      .black h2{
         background: black;
-        color: #fff;
-        margin: -20px -20px 0 -20px;
-        font-weight: 300;
-        @include prefix(border-radius, 3px 3px 0 0);
       }
 
       &:before {
@@ -209,9 +216,23 @@ header {
         height: 0;
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent;
-        border-left:7px solid $primary-color;
+        //border-left:7px solid $primary-color;
       }
-
+      &.left-black-arrow{
+        &:before {
+          border-right:7px solid black;
+        }
+      }
+      &.left-blue-arrow{
+        &:before {
+          border-right:7px solid $primary-color;
+        }
+      }
+      &.left-green-arrow{
+        &:before {
+          border-right:7px solid $secondary-color;
+        }
+      }
       &.right {
         float: right;
 
@@ -220,7 +241,7 @@ header {
           right: 45%;
           left: inherit;
           border-left: 0;
-          border-right: 7px solid black;
+          //border-right: 7px solid black;
         }
       }
     }

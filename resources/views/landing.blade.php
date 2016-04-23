@@ -70,10 +70,10 @@
                 </svg>
 
                 </div>
-                <div class="timeline-content">
+                <div class="timeline-content blue-arrow">
                     <div class="blue">
-                        <h2>The customer allows our product to query payment information from their bank provider.</h2>
-                        <p>The system can only query information about the specific payment done to the vendor.</p>
+                        <h2>Client authentication</h2>
+                        <p>Buyer identifies himself in Virtual Handshake environment by logging in with his ID credentials. Setups application/request towards Vendor describing bank wire transfer details.</p>
                     </div>
                 </div>
             </div>
@@ -95,10 +95,10 @@
                 </svg>
 
                 </div>
-                <div class="timeline-content right">
+                <div class="timeline-content right left-green-arrow">
                     <div class="green">
-                        <h2>Our system periodically pings client's bank history to see if the transfer has been wired.</h2>
-                        <p>Once our system detects a successful payment, it notifies the vendor that the transfer has been made.</p>
+                        <h2>Request processing</h2>
+                        <p>Virtual Handshake processes the request by asking transfer confirmation from Bank the Buyer used for paying for the invoice.</p>
 
                     </div>
                 </div>
@@ -118,14 +118,10 @@
                 </svg>
 
                 </div>
-                <div class="timeline-content">
-                    <div class="black">
-                        <h2>The customer waits for the product to arrive.</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
-                            modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae
-                            sunt
-                            ipsa.
+                <div class="timeline-content green-arrow">
+                    <div class="green">
+                        <h2>Informing vendor</h2>
+                        <p>Once positive confirmation is received Virtual Handshake informs the Vendor, that he is good to ship the parcel.
                         </p>
                     </div>
                 </div>
@@ -146,12 +142,11 @@
                 </svg>
 
                 </div>
-                <div class="timeline-content right">
+                <div class="timeline-content right left-black-arrow">
                     <div class="black">
-                        <h2>Escrow release</h2>
-                        <p>
-                            When confirmation is given by the customer that the product has been shipped, we release the
-                            escrow payment to be delivered to the vendor.
+                        <h2>Shipping confirmation</h2>
+                        <p>Vendor confirms to Buyer shipping the parcel through Virtual Handshake account.
+                            Once transaction is completed both counterparties can leave the feedback.
                         </p>
                     </div>
                 </div>

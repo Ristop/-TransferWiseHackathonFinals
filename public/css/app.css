@@ -21,7 +21,7 @@ body {
   position: relative; }
 
 .section-main-first .img-responsive {
-  opacity: 0.8;
+  opacity: 0.6;
   max-height: 350px;
   overflow: hidden;
   width: 100%; }
