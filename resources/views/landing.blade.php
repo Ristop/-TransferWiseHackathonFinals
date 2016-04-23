@@ -162,14 +162,14 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label id="subscribe-name" for="subscribe">Wire the funds</label>
-                        <input type="text" class="form-control" placeholder="Vendor identification" name="address">
+                        <input type="text" class="form-control" placeholder="Vendor identification" name="vendor_id">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Billing reference" name="address">
+                        <input type="text" class="form-control" placeholder="Billing reference" name="bill_ref">
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Amount" name="address">
+                            <input type="text" class="form-control" placeholder="Amount" name="bill_amount">
                      <span class="input-group-btn">
                     <input type="submit" value="Send" class="btn btn-secondary subscribe-button">
                          </span>
@@ -178,16 +178,18 @@
                 </form>
             </div>
             <div class="Vendor col-md-6 col-xs-6">
-                <form action="checkPayment" method="POST">
-                    {{ csrf_field() }}
-                    <label id="subscribe-name" for="subscribe">Check if the payment has arrived</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Billing reference" name="address">
+
+                <label id="subscribe-name" for="subscribe">Check if the payment has arrived</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Billing reference" name="address">
                      <span class="input-group-btn">
-                    <input type="submit" value="Check" class="btn btn-secondary subscribe-button">
+                    <input type="submit" value="Check" id="checkPayment" class="btn btn-secondary subscribe-button">
                          </span>
-                    </div>
-                </form>
+                </div>
+
+                <div class="container" style="padding-top: 20px;" id="paymentRow">
+
+                </div>
             </div>
         </div>
     </div>

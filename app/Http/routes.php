@@ -14,18 +14,10 @@ use Illuminate\Http\Request;
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', function () {
-        $transactions = App\Transaction::all();
-        return view('landing', ['transactions' => $transactions]);
+        return view('landing');
     });
-    Route::get('wallet/buyer', function () {
-        $transactions = App\Transaction::all();
-        return view('wallet.buyer', ['transactions' => $transactions]);
-    });
-    Route::get('wallet/vendor', function () {
-        return view('wallet.vendor');
-    });
-    Route::get('login', function () {
-        return view('login');
-    });
-    Route::post('saveemail', 'Controller@saveEmail');
+    
+    Route::post('/saveemail', 'Controller@saveEmail');
+    Route::post('/makePayment', 'Controller@makePayment');
+    Route::post('/checkPayment', 'Controller@checkPayment');
 });

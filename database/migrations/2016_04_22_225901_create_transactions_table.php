@@ -13,13 +13,9 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->integer('wallet_id');
-            $table->string('source');
-            $table->string('target');
-            $table->double('sourceAmount');
-            $table->double('targetAmount');
-            $table->double('rate');
-            $table->double('fee');
+            $table->integer('vendor_id');
+            $table->string('bill_ref');
+            $table->double('bill_amount');
             $table->timestamps();
         });
     }
