@@ -9,6 +9,10 @@ body{
   width:580px;             /* As IE ignores !important it will set width as 1000px; */
 }
 
+p{
+  font-size: 19px;
+}
+
 .navbar-virtual-handshake {
   background-color: whitesmoke;
   margin: 0;

@@ -7,10 +7,10 @@
         </div>
         <div class="section-main-first-content">
             <div class="Buyer col-md-6 col-xs-6">
-                <p class="pull-right">Client</p>
+                <h2 class="pull-right">Client</h2>
             </div>
             <div class="Vendor col-md-6 col-xs-6">
-                <p class="pull-left">Vendor</p>
+                <h2 class="pull-left">Vendor</h2>
             </div>
         </div>
         <div id="subscribe-container">
@@ -157,7 +157,7 @@
     <div class="section-live-demo">
         <h1 class="section-live-demo-header">What it looks like</h1>
         <div class="container">
-            <div class="Buyer col-md-6 col-xs-6">
+            <div class="Buyer col-lg-6 col-md-6 col-xs-6">
                 <form action="makePayment" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group">
@@ -177,7 +177,7 @@
                     </div>
                 </form>
             </div>
-            <div class="Vendor col-md-6 col-xs-6">
+            <div class="Vendor col-lg-6 col-md-6 col-xs-6">
 
                 <label id="subscribe-name" for="subscribe">Check if the payment has arrived</label>
                 <div class="input-group">
@@ -187,7 +187,7 @@
                          </span>
                 </div>
 
-                <div class="container" style="padding-top: 20px;" id="paymentRow">
+                <div style="padding-top: 20px;" id="paymentRow">
 
                 </div>
             </div>
