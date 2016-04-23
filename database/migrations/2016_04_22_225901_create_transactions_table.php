@@ -13,7 +13,7 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->string('role');
+            $table->integer('wallet_id');
             $table->string('source');
             $table->string('target');
             $table->double('sourceAmount');

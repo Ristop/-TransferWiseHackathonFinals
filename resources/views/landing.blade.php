@@ -15,13 +15,16 @@
         </div>
         <div id="subscribe-container">
             <div class="col-lg-8">
-                <label id="subscribe-name" for="subscribe">Subscribe for updates</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="email address" id="subscribe">
-                <span class="input-group-btn">
-                    <button class="btn btn-secondary subscribe-button" type="button">Subscribe</button>
-                </span>
-                </div>
+                <form action="saveemail" method="POST">
+                    {{ csrf_field() }}
+                    <label id="subscribe-name" for="subscribe">Subscribe for updates</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="email address" name="address">
+                     <span class="input-group-btn">
+                    <input type="submit" value="Subscribe" class="btn btn-secondary subscribe-button">
+                         </span>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -75,15 +78,15 @@
             <h1 class="text-center">Clients</h1>
             <div id="section-two" class="row text-center">
                 @foreach($transactions as $transaction)
-                    @if( $transaction -> role == "client")
-                        <div style="padding: 20px;">
-                            <p>Source: {{ $transaction -> sourceAmount }} {{ $transaction -> source }}</p>
+    @if( $transaction -> role == "client")
+            <div style="padding: 20px;">
+                <p>Source: {{ $transaction -> sourceAmount }} {{ $transaction -> source }}</p>
                             <p>Target: {{ $transaction -> targetAmount }} {{ $transaction -> target }}</p>
                             <p>Rate: {{ $transaction -> rate }}</p>
                             <p>Fee: {{ $transaction -> fee }} {{ $transaction -> source }}</p>
                         </div>
                     @endif
-                @endforeach
+    @endforeach
             </div>
         </div>
         <div class="Vendor col-md-6 col-xs-6">
@@ -91,15 +94,15 @@
             <h1 class="text-center">Vendors</h1>
             <div id="section-three" class="row text-center">
                 @foreach($transactions as $transaction)
-                    @if( $transaction -> role == "vendor")
-                        <div style="padding: 20px;">
-                            <p>Source: {{ $transaction -> sourceAmount }} {{ $transaction -> source }}</p>
+    @if( $transaction -> role == "vendor")
+            <div style="padding: 20px;">
+                <p>Source: {{ $transaction -> sourceAmount }} {{ $transaction -> source }}</p>
                             <p>Target: {{ $transaction -> targetAmount }} {{ $transaction -> target }}</p>
                             <p>Rate: {{ $transaction -> rate }}</p>
                             <p>Fee: {{ $transaction -> fee }}</p>
                         </div>
                     @endif
-                @endforeach
+    @endforeach
             </div>
         </div>
     </div>

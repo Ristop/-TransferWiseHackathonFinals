@@ -12,7 +12,7 @@ class TransactionSeeder extends Seeder
     public function run()
     {
         DB::table('transactions')->insert([
-            'role' => 'client',
+            'wallet_id' => '1',
             'source' => 'USD',
             'target' => 'EUR',
             'sourceAmount' => '116.62',
@@ -22,7 +22,7 @@ class TransactionSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'role' => 'client',
+            'wallet_id' => '2',
             'source' => 'GBP',
             'target' => 'EUR',
             'sourceAmount' => '1000',
@@ -32,7 +32,7 @@ class TransactionSeeder extends Seeder
         ]);
 
         DB::table('transactions')->insert([
-            'role' => 'vendor',
+            'wallet_id' => '3',
             'source' => 'EUR',
             'target' => 'SEK',
             'sourceAmount' => '109.81',
