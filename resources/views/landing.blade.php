@@ -122,11 +122,13 @@
 
                 </div>
                 <div class="timeline-content">
-                    <h2>Client buys the item form the vendor.</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
-                    </p>
+                    <div class="blue">
+                        <h2>Client buys the item form the vendor.</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -148,12 +150,14 @@
 
                 </div>
                 <div class="timeline-content right">
-                    <h2>LOREM IPSUM DOLOR</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
-                        modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt
-                        ipsa.
-                    </p>
+                    <div class="black">
+                        <h2>LOREM IPSUM DOLOR</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
+                            modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt
+                            ipsa.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -172,12 +176,14 @@
 
                 </div>
                 <div class="timeline-content">
+                    <div class="blue">
                     <h2>LOREM IPSUM DOLOR</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
                         modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt
                         ipsa.
                     </p>
+                        </div>
                 </div>
             </div>
         </div>

@@ -83,7 +83,7 @@ h1, h2, h3, h4 {
 
 // Header
 header {
-  background: $secondary-color;
+  background: $primary-color;
   padding: 10px;
   @include prefix(box-shadow, 0 3px 3px rgba(0,0,0,0.05));
   @extend %clearfix;
@@ -166,13 +166,34 @@ header {
       width: 45%;
       background: #fff;
       padding: 20px;
+
       @include prefix(box-shadow, 0 3px 0 rgba(0,0,0,0.1));
       @include prefix(border-radius, 5px);
       @include prefix(transition, all .3s ease);
-
-      h2 {
+      p{
+        padding-top: 20px;
+      }
+      .blue h2 {
         padding: 15px;
         background: $primary-color;
+        color: #fff;
+        margin: -20px -20px 0 -20px;
+        font-weight: 300;
+        @include prefix(border-radius, 3px 3px 0 0);
+      }
+
+      .green h2 {
+        padding: 15px;
+        background: $secondary-color;
+        color: #fff;
+        margin: -20px -20px 0 -20px;
+        font-weight: 300;
+        @include prefix(border-radius, 3px 3px 0 0);
+      }
+
+      .black h2 {
+        padding: 15px;
+        background: black;
         color: #fff;
         margin: -20px -20px 0 -20px;
         font-weight: 300;
@@ -199,7 +220,7 @@ header {
           right: 45%;
           left: inherit;
           border-left: 0;
-          border-right: 7px solid $primary-color;
+          border-right: 7px solid black;
         }
       }
     }
@@ -217,7 +238,9 @@ header {
     }
 
     .timeline-item {
+
       .timeline-content {
+
         width: 90%;
         float: right;
 
