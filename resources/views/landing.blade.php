@@ -157,7 +157,8 @@
                         <h2>LOREM IPSUM DOLOR</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
-                            modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt
+                            modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae
+                            sunt
                             ipsa.
                         </p>
                     </div>
@@ -180,13 +181,14 @@
                 </div>
                 <div class="timeline-content">
                     <div class="blue">
-                    <h2>LOREM IPSUM DOLOR</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
-                        modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt
-                        ipsa.
-                    </p>
-                        </div>
+                        <h2>LOREM IPSUM DOLOR</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam
+                            modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae
+                            sunt
+                            ipsa.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,6 +196,53 @@
 
     <div class="section-live-demo">
         <h1 class="section-live-demo-header">What it looks like</h1>
+        <div class="container">
+            <div class="Buyer col-md-6 col-xs-6">
+                <form action="makePayment" method="POST">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <label id="subscribe-name" for="subscribe">Make a payment</label>
+                        <input type="text" class="form-control" placeholder="Vendor identification" name="address">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Billing reference" name="address">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Amount" name="address">
+                     <span class="input-group-btn">
+                    <input type="submit" value="Send" class="btn btn-secondary subscribe-button">
+                         </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn-group">
+                            <button type="button" id="button1" class="btn btn-default">
+                                Upon receive
+                            </button>
+                            <button type="button"  id="button2" class="btn btn-default">
+                                50/50
+                            </button>
+                            <button type="button" id="button3" class="btn btn-default">
+                                At delivery
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="Vendor col-md-6 col-xs-6">
+                <form action="checkPayment" method="POST">
+                    {{ csrf_field() }}
+                    <label id="subscribe-name" for="subscribe">Check the payment</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Billing reference" name="address">
+                     <span class="input-group-btn">
+                    <input type="submit" value="Check" class="btn btn-secondary subscribe-button">
+                         </span>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
 @stop

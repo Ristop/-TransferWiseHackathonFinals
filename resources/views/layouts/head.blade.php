@@ -18,5 +18,6 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<!-- Blaa -->
-<script src="/js/append.js" type="text/javascript"></script>
+<!--javascript-->
+<script src={{URL::asset('/js/jquery.js')}} defer></script>
+<script src={{URL::asset('/js/paymentOption.js')}} defer></script>
